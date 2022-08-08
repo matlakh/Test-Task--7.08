@@ -1,0 +1,16 @@
+.header {
+    background: #ffffff;
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 17px 0;
+    }
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 210px;
+        width: 100%;
+    }
+}

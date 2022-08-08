@@ -1,0 +1,29 @@
+.preloader,
+.preloader:after {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+}
+
+.preloader {
+    margin: 60px auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 8px solid transparent;
+    border-right: 8px solid #00BDD3;
+    border-bottom: 8px solid #00BDD3;
+    border-left: 8px solid #00BDD3;
+    transform: translateZ(0);
+    animation: preloader 1.1s infinite linear;
+}
+
+@keyframes preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

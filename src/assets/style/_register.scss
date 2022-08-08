@@ -1,0 +1,185 @@
+.register {
+    background: transparent;
+    padding-bottom: 100px;
+    &__form {
+        max-width: 380px;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+        &--input {
+            position: relative;
+            margin-bottom: 50px;
+            & input {
+                width: 100%;
+                height: 54px;
+                padding: 16px 0 16px 14px;
+                font-family: "Nunito";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                color: rgba(0, 0, 0, 0.87);
+                background: #f8f8f8;
+                border: 1px solid #d0cfcf;
+                border-radius: 4px;
+                &::placeholder {
+                    color: #7e7e7e;
+                }
+                &:focus {
+                    background: #f8f8f8;
+                    border: 1px solid #d0cfcf !important;
+                }
+            }
+            & label {
+                position: absolute;
+                left: 16px;
+                top: 60px;
+                font-family: "Nunito";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 14px;
+            }
+            & .input-helper {
+                color: #7e7e7e;
+            }
+            &.error {
+                & input {
+                    border: 2px solid #cb3d40;
+                }
+                & label {
+                    color: #cb3d40;
+                }
+            }
+        }
+        &--fieldset {
+            border: none;
+            margin-bottom: 47px;
+            & legend {
+                font-family: "Nunito";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                color: rgba(0, 0, 0, 0.87);
+                margin-bottom: 11px;
+            }
+        }
+        &--radiobutton {
+            margin: 0.5rem;
+            input[type="radio"] {
+                position: absolute;
+                opacity: 0;
+                +label {
+                    font-family: "Nunito";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: rgba(0, 0, 0, 0.87);
+                    display: flex;
+                    align-items: center;
+                    &:before {
+                        content: "";
+                        background: #fff;
+                        border-radius: 100%;
+                        border: 1px solid #d0cfcf;
+                        display: inline-block;
+                        position: relative;
+                        top: 0;
+                        margin-right: 12px;
+                        cursor: pointer;
+                        text-align: center;
+                        transition: all 0.3s ease-in;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                &:checked {
+                    +label {
+                        &:before {
+                            background-color: #00bdd3;
+                            border-color: #00bdd3;
+                            box-shadow: inset 0 0 0 4px #fff;
+                        }
+                    }
+                }
+                &:focus {
+                    +label {
+                        &:before {
+                            outline: none;
+                            border-color: #00bdd3;
+                        }
+                    }
+                }
+                +label {
+                    &:empty {
+                        &:before {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &--upload {
+            width: 100%;
+            position: relative;
+            margin: 50px 0;
+            text-align: center;
+            & .file__wrapper {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            & .file__fake {
+                height: 54px;
+                width: calc(100% - 83px);
+                display: flex;
+                align-items: center;
+                padding: 0 15px;
+                border: 1px solid #d0cfcf;
+                border-radius: 4px;
+                font-family: "Nunito";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                display: flex;
+                align-items: center;
+                color: #7e7e7e;
+            }
+            & .file__button {
+                width: 83px;
+                height: 54px;
+                background: transparent;
+                font-family: "Nunito";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                color: rgba(0, 0, 0, 0.87);
+                justify-content: center;
+                border: 1px solid rgba(0, 0, 0, 0.87);
+                border-radius: 4px 0px 0px 4px;
+                cursor: pointer;
+            }
+            & .field__file {
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+        & .button {
+            margin: 0 auto;
+        }
+    }
+}
